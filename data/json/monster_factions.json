@@ -188,5 +188,9 @@
     "type": "MONSTER_FACTION",
     "name": "triffid",
     "base_faction": "plant"
-  }
+  },
+  {
+    "type": "MONSTER_FACTION",
+    "name": "xenomorph"
+  }  
 ]
