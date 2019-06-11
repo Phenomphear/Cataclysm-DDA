@@ -96,6 +96,10 @@
   },
   {
     "type": "SPECIES",
+    "id": "XENOMORPH"
+  },
+  {
+    "type": "SPECIES",
     "id": "UNKNOWN"
   }
 ]
