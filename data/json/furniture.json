@@ -6553,5 +6553,42 @@
       ]
     },
     "flags": [ "TRANSPARENT", "FLAMMABLE_ASH", "ORGANIC" ]
-  }
+  },
+    {
+    "type": "furniture",
+    "id": "f_alien_egg",
+    "name": "Alien Egg",
+    "description": "A huge alien egg sack.  Something moves inside.",
+    "symbol": "O",
+    "color": "light_green",
+    "move_cost_mod": 3,
+    "required_str": 6,
+    "flags": [ "TRANSPARENT", "FLAMMABLE_ASH", "ORGANIC", "MOUNTABLE", "TINY" ],
+    "bash": { "str_min": 4, "str_max": 8, "sound": "splat!", "sound_fail": "whump.", "furn_set": "f_alien_egg_smashed" }
+  },
+    {
+    "type": "furniture",
+    "id": "f_alien_egg_smashed",
+    "name": "Destroyed Egg",
+    "description": "A smashed alien egg. It's contents have also been destroyed.",
+    "symbol": "X",
+    "color": "white",
+    "move_cost_mod": 3,
+    "required_str": 6,
+    "flags": [ "TRANSPARENT", "CONTAINER", "FLAMMABLE_ASH", "ORGANIC", "MOUNTABLE", "TINY" ],
+    "bash": { "str_min": 2, "str_max": 6, "sound": "splat!", "sound_fail": "whump." }
+  },
+    {
+    "type": "furniture",
+    "id": "f_alien_egg_open",
+    "name": "Unfolded Alien Egg",
+    "description": "An alien egg that has unfolded and released...something...",
+    "symbol": "U",
+    "color": "white",
+    "move_cost_mod": 3,
+    "required_str": 6,
+    "flags": [ "TRANSPARENT", "CONTAINER", "FLAMMABLE_ASH", "ORGANIC", "MOUNTABLE", "TINY" ],
+    "bash": { "str_min": 2, "str_max": 6, "sound": "splat!", "sound_fail": "whump." }
+  },
+   
 ]
