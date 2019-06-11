@@ -6558,7 +6558,7 @@
     "type": "furniture",
     "id": "f_alien_egg",
     "name": "Alien Egg",
-    "description": "A huge alien egg sack.  Something moves inside.",
+    "description": "A huge, alien, egg sack.",
     "symbol": "O",
     "color": "light_green",
     "move_cost_mod": 3,
@@ -6569,7 +6569,7 @@
     {
     "type": "furniture",
     "id": "f_alien_egg_smashed",
-    "name": "Destroyed Egg",
+    "name": "Destroyed alien egg",
     "description": "A smashed alien egg. It's contents have also been destroyed.",
     "symbol": "X",
     "color": "white",
@@ -6581,8 +6581,8 @@
     {
     "type": "furniture",
     "id": "f_alien_egg_open",
-    "name": "Unfolded Alien Egg",
-    "description": "An alien egg that has unfolded and released...something...",
+    "name": "hatched alien egg",
+    "description": "An alien egg that has hatched and released...something...",
     "symbol": "U",
     "color": "white",
     "move_cost_mod": 3,
