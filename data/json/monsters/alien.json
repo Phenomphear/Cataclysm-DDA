@@ -29,7 +29,8 @@
   "path_settings": { "max_dist": 50 },
   "special_attacks": { "type": "leap", "cooldown": 10, "max_range": 4 },
   "death_function": [ "NORMAL" ],
-  "flags": [
+  "flags": 
+  [
     "SMELLS",
     "HEARS",
     "WARM",
@@ -39,6 +40,7 @@
     "ACID",
     "PATH_AVOID_DANGER_2",
     "PRIORITIZE_TARGETS",
+  ]     
 },
 {
   "id": "mon_xenomorph_Drone",
