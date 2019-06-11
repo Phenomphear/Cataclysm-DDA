@@ -1,9 +1,9 @@
 [
  {
-  "id": "mon_face_hugger",
+  "id": "mon_alien_crab",
   "type": "MONSTER",
   "name": "Alien Crab",
-  "description": "A small, pale, crab-like creature with a long whip shaped tail.",
+  "description": "A small crab-like creature with a long whip shaped tail.",
   "default_faction": "XENOMORPH",
   "bodytype": "crab",
   "species": [ "xenomorph" ],
@@ -42,7 +42,7 @@
   ]
 },
      {
-  "id": "mon_chest_burster",
+  "id": "mon_alien_worm",
   "type": "MONSTER",
   "name": "Alien Worm",
   "description": "A small worm like creature with metallic teeth. Occasionally it snaps at the air with a loud hiss whipping it's tail back and forth. Bits of flesh from another creature are stuck to it's oily skin.",
