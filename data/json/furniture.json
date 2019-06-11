@@ -6589,6 +6589,5 @@
     "required_str": 6,
     "flags": [ "TRANSPARENT", "CONTAINER", "FLAMMABLE_ASH", "ORGANIC", "MOUNTABLE", "TINY" ],
     "bash": { "str_min": 2, "str_max": 6, "sound": "splat!", "sound_fail": "whump." }
-  },
-   
-]
+  }
+ ]
