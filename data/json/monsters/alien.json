@@ -39,6 +39,7 @@
     "ACID",
     "PATH_AVOID_DANGER_2",
     "PRIORITIZE_TARGETS",
+},
 {
   "id": "mon_xenomorph_Drone",
   "type": "MONSTER",
@@ -70,7 +71,8 @@
   "path_settings": { "max_dist": 50 },
   "special_attacks": { "type": "leap", "cooldown": 10, "max_range": 6 },
   "death_function": [ "NORMAL" ],
-  "flags": [
+  "flags": 
+    [
     "SEES",
     "SMELLS",
     "HEARS",
@@ -81,6 +83,7 @@
     "ACID_BLOOD",
     "ACID",
     "PATH_AVOID_DANGER_2",
-    "PRIORITIZE_TARGETS"
- },
+    "PRIORITIZE_TARGETS" 
+    ]
+  }
 ]
