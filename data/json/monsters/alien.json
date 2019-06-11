@@ -13,7 +13,7 @@
   "speed": 150,
   "material": [ "acidchitin" ],
   "symbol": "f",
-  "color": "tan",
+  "color": "light_green",
   "aggression": 100,
   "morale": 30,
   "melee_skill": 3,
@@ -24,12 +24,12 @@
   "armor_bash": 4,
   "armor_cut": 4,
   "armor_acid": 8,
-  "vision_day": 40,
+  "vision_day": 50,
   "harvest": "arachnid_acid",
   "path_settings": { "max_dist": 50 },
   "special_attacks": { "type": "leap", "cooldown": 10, "max_range": 4 },
-  "death_function": [ "NORMAL" ],
-  "flags": 
+  "death_function": [ "ACID" ],
+  "flags":
   [
     "SMELLS",
     "HEARS",
@@ -37,10 +37,9 @@
     "BASHES",
     "POISON",
     "ACID_BLOOD",
-    "ACID",
     "PATH_AVOID_DANGER_2",
-    "PRIORITIZE_TARGETS",
-  ]     
+    "PRIORITIZE_TARGETS"
+  ]
 },
      {
   "id": "mon_chest_burster",
@@ -56,7 +55,7 @@
   "speed": 145,
   "material": [ "acidchitin" ],
   "symbol": "x",
-  "color": "gray",
+  "color": "light_green",
   "aggression": 50,
   "morale": 30,
   "melee_skill": 2,
@@ -71,8 +70,8 @@
   "harvest": "arachnid_acid",
   "path_settings": { "max_dist": 50 },
   "special_attacks": { "type": "leap", "cooldown": 10, "max_range": 5 },
-  "death_function": [ "NORMAL" ],
-  "flags": 
+  "death_function": [ "ACID" ],
+  "flags":
   [
     "SMELLS",
     "HEARS",
@@ -80,10 +79,9 @@
     "BASHES",
     "POISON",
     "ACID_BLOOD",
-    "ACID",
     "PATH_AVOID_DANGER_2",
-    "PRIORITIZE_TARGETS",
-  ]     
+    "PRIORITIZE_TARGETS"
+  ]
 },
 {
   "id": "mon_xenomorph_drone",
@@ -99,7 +97,7 @@
   "speed": 140,
   "material": [ "acidchitin" ],
   "symbol": "X",
-  "color": "gray",
+  "color": "light_green",
   "aggression": 100,
   "morale": 30,
   "melee_skill": 7,
@@ -115,8 +113,8 @@
   "harvest": "arachnid_acid",
   "path_settings": { "max_dist": 50 },
   "special_attacks": { "type": "leap", "cooldown": 10, "max_range": 6 },
-  "death_function": [ "NORMAL" ],
-  "flags": 
+  "death_function": [ "ACID" ],
+  "flags":
     [
     "SEES",
     "SMELLS",
@@ -126,9 +124,8 @@
     "POISON",
     "NO_BREATHE",
     "ACID_BLOOD",
-    "ACID",
     "PATH_AVOID_DANGER_2",
-    "PRIORITIZE_TARGETS" 
+    "PRIORITIZE_TARGETS"
     ]
   }
 ]
