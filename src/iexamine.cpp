@@ -92,6 +92,7 @@ const mtype_id mon_fungal_blossom( "mon_fungal_blossom" );
 const mtype_id mon_spider_web_s( "mon_spider_web_s" );
 const mtype_id mon_spider_widow_giant_s( "mon_spider_widow_giant_s" );
 const mtype_id mon_spider_cellar_giant_s( "mon_spider_cellar_giant_s" );
+const mtype_id mon_alien_crab( "mon_alien_crab" );
 const mtype_id mon_turret( "mon_turret" );
 const mtype_id mon_turret_rifle( "mon_turret_rifle" );
 
