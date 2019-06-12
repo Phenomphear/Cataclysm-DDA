@@ -258,7 +258,6 @@
   "death_function": [ "ACID" ],
   "flags":
     [
-    "HUGE",
     "PUSH_MON",
     "SEES",
     "SMELLS",
