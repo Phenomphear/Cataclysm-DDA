@@ -6563,14 +6563,15 @@
     "color": "light_green",
     "move_cost_mod": 3,
     "required_str": 6,
+    "examine_action": "alien_egg",
     "flags": [ "TRANSPARENT", "FLAMMABLE_ASH", "ORGANIC", "MOUNTABLE", "TINY" ],
     "bash": { "str_min": 4, "str_max": 8, "sound": "splat!", "sound_fail": "whump.", "furn_set": "f_alien_egg_smashed" }
   },
     {
     "type": "furniture",
     "id": "f_alien_egg_smashed",
-    "name": "Destroyed alien egg",
-    "description": "A smashed alien egg. It's contents have also been destroyed.",
+    "name": "Smashed Alien Egg",
+    "description": "A smashed alien egg.",
     "symbol": "X",
     "color": "white",
     "move_cost_mod": 3,
@@ -6581,13 +6582,13 @@
     {
     "type": "furniture",
     "id": "f_alien_egg_open",
-    "name": "hatched alien egg",
+    "name": "Hatched Alien Egg",
     "description": "An alien egg that has hatched and released...something...",
     "symbol": "U",
     "color": "white",
     "move_cost_mod": 3,
     "required_str": 6,
     "flags": [ "TRANSPARENT", "CONTAINER", "FLAMMABLE_ASH", "ORGANIC", "MOUNTABLE", "TINY" ],
-    "bash": { "str_min": 2, "str_max": 6, "sound": "splat!", "sound_fail": "whump." }
+    "bash": { "str_min": 2, "str_max": 6, "sound": "splat!", "sound_fail": "whump.", "furn_set": "f_alien_egg_smashed" }
   }
  ]
