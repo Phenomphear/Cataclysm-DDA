@@ -1725,37 +1725,52 @@ void iexamine::flower_marloss( player &p, const tripoint &examp )
  * @param examp Location of egg sack
  * @param montype The monster type of the created spiders.
  */
-void iexamine::egg_sack_generic( player &p, const tripoint &examp,
-                                 const mtype_id &montype )
+void iexamine::egg_sack_generic(player &p, const tripoint &examp,
+    const mtype_id &montype)
 {
-    const std::string old_furn_name = g->m.furnname( examp );
-    if( !query_yn( _( "Harvest the %s?" ), old_furn_name ) ) {
-        none( p, examp );
+    const std::string old_furn_name = g->m.furnname(examp);
+    if (!query_yn(_("Harvest the %s?"), old_furn_name)) {
+        none(p, examp);
         return;
     }
-    g->m.furn_set( examp, f_egg_sacke );
+    g->m.furn_set(examp, f_egg_sacke);
     int monster_count = 0;
-    if( one_in( 2 ) ) {
-        const std::vector<tripoint> pts = closest_tripoints_first( 1, examp );
-        for( const auto &pt : pts ) {
-            if( g->is_empty( pt ) && one_in( 3 ) ) {
-                g->summon_mon( montype, pt );
+    if (one_in(2)) {
+        const std::vector<tripoint> pts = closest_tripoints_first(1, examp);
+        for (const auto &pt : pts) {
+            if (g->is_empty(pt) && one_in(3)) {
+                g->summon_mon(montype, pt);
                 monster_count++;
             }
         }
     }
-    int roll = rng( 1, 5 );
-    bool drop_eggs = ( monster_count >= 1 ? true : false );
-    for( int i = 0; i < roll; i++ ) {
-        handle_harvest( p, "spider_egg", drop_eggs );
+    int roll = rng(1, 5);
+    bool drop_eggs = (monster_count >= 1 ? true : false);
+    for (int i = 0; i < roll; i++) {
+        handle_harvest(p, "spider_egg", drop_eggs);
     }
-    if( monster_count == 1 ) {
-        add_msg( m_warning, _( "A spiderling bursts from the %s!" ), old_furn_name );
-    } else if( monster_count >= 1 ) {
-        add_msg( m_warning, _( "Spiderlings burst from the %s!" ), old_furn_name );
+    if (monster_count == 1) {
+        add_msg(m_warning, _("A spiderling bursts from the %s!"), old_furn_name);
+    }
+    else if (monster_count >= 1) {
+        add_msg(m_warning, _("Spiderlings burst from the %s!"), old_furn_name);
     }
 }
 
+void iexamine::egg_sackbw(player &p, const tripoint &examp)
+{
+    egg_sack_generic(p, examp, mon_spider_widow_giant_s);
+}
+
+void iexamine::egg_sackcs(player &p, const tripoint &examp)
+{
+    egg_sack_generic(p, examp, mon_spider_cellar_giant_s);
+}
+
+void iexamine::egg_sackws(player &p, const tripoint &examp)
+{
+    egg_sack_generic(p, examp, mon_spider_web_s);
+}
 /**
  * Spawn alien crab from alien egg in radius 1 around the egg.
  * Transforms the egg furniture into an open egg (f_alien_egg_open).
