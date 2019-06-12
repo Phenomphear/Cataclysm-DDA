@@ -32,6 +32,8 @@ namespace iexamine
 
 void egg_sack_generic( player &p, const tripoint &examp, const mtype_id &montype );
 
+void alien_egg_sack(player &p, const tripoint &examp, const mtype_id &montype);
+
 void none( player &p, const tripoint &examp );
 
 void gaspump( player &p, const tripoint &examp );
