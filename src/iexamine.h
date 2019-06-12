@@ -32,6 +32,8 @@ namespace iexamine
 
 void egg_sack_generic( player &p, const tripoint &examp, const mtype_id &montype );
 
+void alien_egg_sack(player &p, const tripoint &examp, const mtype_id &montype);
+
 void none( player &p, const tripoint &examp );
 
 void gaspump( player &p, const tripoint &examp );
@@ -78,6 +80,7 @@ void flower_marloss( player &p, const tripoint &examp );
 void egg_sackbw( player &p, const tripoint &examp );
 void egg_sackcs( player &p, const tripoint &examp );
 void egg_sackws( player &p, const tripoint &examp );
+void alien_egg( player &p, const tripoint &examp );
 void fungus( player &p, const tripoint &examp );
 void dirtmound( player &p, const tripoint &examp );
 void aggie_plant( player &p, const tripoint &examp );
