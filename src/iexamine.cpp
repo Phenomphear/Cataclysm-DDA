@@ -1756,24 +1756,44 @@ void iexamine::egg_sack_generic( player &p, const tripoint &examp,
     }
 }
 
-void iexamine::egg_sackbw( player &p, const tripoint &examp )
+/**
+ * Spawn alien crab from alien egg in radius 1 around the egg.
+ * Transforms the egg furniture into an open egg (f_alien_egg_open).
+ * @param p The player
+ * @param examp Location of egg sack
+ * @param montype The monster type of the created spiders.
+ */
+void iexamine::alien_egg_sack(player &p, const tripoint &examp,
+                              const mtype_id &montype)
 {
-    egg_sack_generic( p, examp, mon_spider_widow_giant_s );
+    const std::string old_furn_name = g->m.furnname(examp);
+    g->m.furn_set(examp, f_alien_egg_open);
+    int monster_count = 0;
+    if (one_in(2)) 
+    {
+        const std::vector<tripoint> pts = closest_tripoints_first(1, examp);
+        for (const auto &pt : pts) 
+        {
+            if (g->is_empty(pt) && one_in(3)) 
+            {
+                g->summon_mon(montype, pt);
+                monster_count++;
+            }
+        }
+    }
+    
+    if (monster_count == 1) 
+    {
+        add_msg(m_warning, _("An Alien Crab bursts from the %s!"), old_furn_name);
+    }
+    else if (monster_count >= 1) {
+        add_msg(m_warning, _("Alien Crabs burst from the %s!"), old_furn_name);
+    }
 }
 
-void iexamine::egg_sackcs( player &p, const tripoint &examp )
+void iexamine::alien_egg(player &p, const tripoint &examp)
 {
-    egg_sack_generic( p, examp, mon_spider_cellar_giant_s );
-}
-
-void iexamine::egg_sackws( player &p, const tripoint &examp )
-{
-    egg_sack_generic( p, examp, mon_spider_web_s );
-}
-
-void iexamine::alien_egg( player &p, const tripoint &examp )
-{
-    egg_sack_generic( p, examp, mon_alien_crab );
+    alien_egg_sack(p, examp, mon_alien_crab);
 }
 
 /**
@@ -5322,6 +5342,7 @@ iexamine_function iexamine_function_from_string( const std::string &function_nam
             { "egg_sackbw", &iexamine::egg_sackbw },
             { "egg_sackcs", &iexamine::egg_sackcs },
             { "egg_sackws", &iexamine::egg_sackws },
+            { "alien_egg", &iexamine::alien_egg },
             { "dirtmound", &iexamine::dirtmound },
             { "aggie_plant", &iexamine::aggie_plant },
             { "fvat_empty", &iexamine::fvat_empty },
