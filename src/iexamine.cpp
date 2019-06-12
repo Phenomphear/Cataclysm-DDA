@@ -1770,6 +1770,11 @@ void iexamine::egg_sackws( player &p, const tripoint &examp )
     egg_sack_generic( p, examp, mon_spider_web_s );
 }
 
+void iexamine::alien_egg( player &p, const tripoint &examp )
+{
+    egg_sack_generic( p, examp, mon_alien_crab );
+}
+
 /**
  * Remove furniture. Add spore effect.
  */
