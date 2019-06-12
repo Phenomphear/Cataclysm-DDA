@@ -46,7 +46,7 @@
   "id": "mon_queen_alien_crab",
   "type": "MONSTER",
   "name": "Large Alien Crab",
-  "description": "A larger alien crab, it seems different then the others."
+  "description": "A larger alien crab, it seems different then the others.",
   "default_faction": "XENOMORPH",
   "bodytype": "insect",
   "species": [ "xenomorph" ],
