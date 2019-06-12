@@ -78,6 +78,7 @@ void flower_marloss( player &p, const tripoint &examp );
 void egg_sackbw( player &p, const tripoint &examp );
 void egg_sackcs( player &p, const tripoint &examp );
 void egg_sackws( player &p, const tripoint &examp );
+void alien_egg( player &p, const tripoint &examp );
 void fungus( player &p, const tripoint &examp );
 void dirtmound( player &p, const tripoint &examp );
 void aggie_plant( player &p, const tripoint &examp );
